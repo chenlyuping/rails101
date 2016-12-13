@@ -1,4 +1,6 @@
-class WelcomeController < ApplicationController
+
+class GroupsController < ApplicationController
+befor_action :authenticate_user! , only: [:new]
   def index
     flash[:warning] = "这是 warning 讯息！"
 
